@@ -1,0 +1,543 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+:root {
+    --color-yellow: #ffca00;
+    --color-blue: #013e75;
+}
+
+header {
+    background-color: var(--color-yellow);
+    
+}
+
+.inicio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-blue);
+}
+
+.logoGerdau {
+    margin-right: 2rem; 
+    width: 10rem;
+    height: auto;
+}
+
+.nome {
+   display: flex;
+   flex-grow: 1;
+   flex-direction: column;
+   align-items: center;
+   text-align: left;
+   max-width: auto;
+   
+   
+}
+
+.nome h1 {
+    font-size: 3rem
+}
+
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: left;
+    background-color: var(--color-blue);
+    color: #ffff;
+    border: 0.063rem solid var(--color-blue);
+    border-radius: 55rem;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.apresentacao h1 {
+    font-size: 3rem;
+    margin: auto;
+}
+
+.apresentacao p {
+    font-size: 1.5rem;
+    margin: 1rem;
+    width: 55%;
+    text-align: justify;
+    margin: auto;
+}
+
+.sobreMim {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border: 0.063rem solid var(--color-yellow);;
+    border-radius: .75rem;
+    padding: 2rem;
+    height: 100%;
+    color: var(--color-blue);
+}
+
+.sobreMimContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;  
+    
+}
+
+.sobreMimContainer h2 {
+    font-size: 2rem;
+    margin: auto;
+}
+
+.sobreMimContainer ul,
+.sobreMimContainer p {
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    line-height: 2rem;
+    
+}
+
+.fotosContainer {
+    margin: auto;
+}
+
+.images {
+    border-radius: .75rem;
+    height: 30rem;
+    width: 20rem;
+    object-fit: cover;
+    transform: rotate(-2deg);
+}
+
+.gallery__img-wrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.gallery__img-wrapper + .gallery__img-wrapper{
+    margin-left: 3rem;
+    margin-top: 3rem;
+}
+
+.gallery__img-wrapper:nth-child(even) > .images {
+    top: 0rem;
+    transform: rotate(2deg);
+}
+
+.gallery__img-wrapper:nth-child(odd) > .images {
+    top: 0rem;
+    transform: rotate(-2deg);
+}
+
+.gallery__img-wrapper::after {
+    content: "";
+    background-color: rgb(228, 26, 26);
+    border-radius: 999px;
+    display: block;
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    top: 0.25rem;
+    right: 1rem;
+}
+
+.gallery__img-wrapper:nth-child(even)::after {
+    left: 1rem;
+}
+
+.informacoesAcademicas {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1rem;
+    margin: 2rem;
+}
+
+
+
+.informacaoAcademicaContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+    gap: 1rem;
+    border: 0.063rem solid var(--color-yellow);
+    border-radius: .75rem;
+    transition: transform 0.3s ease;
+}
+
+.informacaoAcademicaContainer:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.informacoesAcademicas h2 {
+    font-size: 2rem;
+    margin: auto;
+    padding: 1rem;
+}
+
+.informacoesAcademicas ul {
+    font-size: 1.25rem;
+    margin-left: 3rem;
+    line-height: 2rem;
+}
+
+.informacoesContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.books {
+  width: 15rem;
+  margin-left: 40rem;
+
+}
+
+.imagebooks {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.imagebooks:hover {
+    transform: scale(1.2);
+}
+
+.cursosConhecimento {
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 2rem 2rem 0;
+    padding: 2rem 2rem 2rem 0;
+    gap: 2rem;
+}
+
+.cursosExtracurriculares {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: #013e75 0.063rem solid;
+    border-radius: .75rem;
+    padding: 2rem;
+    background-color: var(--color-blue);
+    color: #ffff;
+    transition: transform 0.3s ease;
+    
+}
+
+.cursosExtracurriculares:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.cursosExtracurriculares h2 {
+    font-size: 2rem;
+}
+
+.cursosExtracurriculares ul {
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    line-height: 2rem;
+}
+
+.ConhecimentoExperiencias {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: #013e75 0.063rem solid;
+    border-radius: .75rem;
+    padding: 2rem;
+    background-color: var(--color-blue);
+    color: #ffff;
+    transition: transform 0.3s ease;
+}
+
+.ConhecimentoExperiencias:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.ConhecimentoExperiencias h2 {
+    font-size: 2rem;
+}
+
+.ConhecimentoExperiencias ul {
+    font-size: 1.25rem;
+    margin-left: 2rem;
+    line-height: 2rem;
+}
+
+.imageComputerContainer {
+    display: flex;
+    width: 20rem;
+    align-items: center;
+}
+
+.imagecomputer {
+    max-width: 100%;
+    height: auto;
+}
+
+.cursosExtracurriculares,
+.ConhecimentoExperiencias {
+    flex: 1;
+    max-width: 40rem;
+}
+
+.experienciasProfissionais {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.titleExperiencias {
+    font-size: 2rem;
+    color: #013e75;
+    margin-bottom: 1.5rem;
+}
+
+.experienciasProfissionaisContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.experienciaContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.experienciaDanfoss {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    border-radius: .75rem;
+    padding: 1rem;
+    max-width: 55rem;
+    background-color: var(--color-blue);
+    color: #ffff;
+    transition: transform 0.3s ease;
+}
+
+.experienciaEstagio {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    border-radius: .75rem;
+    padding: 1rem;
+    max-width: 55rem;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+    transition: transform 0.3s ease;
+}
+
+.experienciaSerramar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: none;
+    border-radius: .75rem;
+    padding: 1rem;
+    max-width: 55rem;
+    background-color: var(--color-blue);
+    color: #ffff;
+    transition: transform 0.3s ease;
+}
+
+.experienciaDanfoss:hover,
+.experienciaEstagio:hover,
+.experienciaSerramar:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.experienciaDanfoss h2,
+.experienciaEstagio h2,
+.experienciaSerramar h2 {
+    
+    text-align: center;
+}
+
+.descricao {
+    font-size: 1.25rem;
+   margin: auto;
+}
+
+.imageWorkContainer {
+    position: absolute;
+    width: 20rem;
+    right: 10rem;
+    top: 152rem;
+    
+}
+
+.imageWork {
+    max-width: 100%;
+    height: auto;
+}
+
+.formacaoAcademica {
+    margin: 2rem;
+    padding: 2rem;
+}
+
+.titleFormacao {
+    font-size: 2rem;
+    text-align: center;
+    color: #013e75;
+    margin-bottom: 1.5rem;
+}
+
+.formacaoContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.PosGraduacao,
+.superiorLogistica {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border: #013e75 0.063rem solid;
+    border-radius: .75rem;
+    padding: 2rem;
+    background-color: var(--color-blue);
+    color: #ffff;
+    transition: transform 0.3s ease;
+    max-width: 55rem;
+}
+
+.PosGraduacao:hover,
+.superiorLogistica:hover {
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.descricaoFormacao {
+    font-size: 1.25rem;
+    margin: auto;
+}
+
+.imageCertificateContainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 1rem;
+}
+
+.imageCertificate {
+    max-width: 25rem;
+    height: auto;
+}
+
+.objetivosContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-blue);
+    color: #ffff;
+    padding: 2rem;
+    height: 25rem;
+}
+
+.titleObjetivos {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.descricaoObjetivos {
+    font-size: 1.8rem;
+    margin: auto;
+    text-align: center;
+    width: 50rem;
+    line-height: 2rem;
+}
+
+.agradecimento {
+    margin: 2rem;
+    padding: 2rem; 
+}
+
+.agradecimentoContainer {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 1rem;
+    border-radius: .75rem;
+    padding: 2rem;
+    background-color: var(--color-yellow);
+    color: var(--color-blue);
+    transition: transform 0.3s ease;
+    width: 35rem;
+}
+
+.agradecimentoContainer:hover { 
+    transform: scale(1.07);
+    cursor: pointer;
+}
+
+.logoGerdauFinal {
+    display: flex;
+    width: 15rem;
+    height: auto;
+    margin: auto;
+    align-items: center;
+}
+
+.titleAgradecimento {
+    font-size: 2rem;
+    text-align: center;
+    color: #013e75;
+    margin-bottom: 1.5rem;
+}
+
+.footer {
+    background-color: #013e75; /* Cor de fundo do footer */
+    color: #ffffff; /* Cor do texto */
+    padding: 2rem; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-title {
+    font-size: 1.5rem; /* Tamanho do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+}
+
+.footer-list {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o preenchimento padrão */
+}
+
+.footer-item {
+    margin: 0.5rem 0; /* Espaço entre os itens */
+}
+
+.footer-item a {
+    color: #ffffff; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: color 0.3s; /* Transição suave para a mudança de cor */
+}
+
+.footer-item a:hover {
+    color: #ffcc00; /* Cor dos links ao passar o mouse */
+}
+
+.footer-bottom {
+    margin-top: 1rem; /* Espaço acima do rodapé */
+    font-size: 0.9rem; /* Tamanho do texto do rodapé */
+}
+
+
+
+
